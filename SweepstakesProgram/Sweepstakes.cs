@@ -31,7 +31,7 @@ namespace SweepstakesProgram
         }
 
         // member methods
-        public void RegisterContestant(Contestant contestant)
+        public void RegisterContestant(Contestant contestant) //SF: should be capturing the info being passed into UserInterface and assigning it to the contestants values
         {
             contestant.firstName = UserInterface.GetFirstName();
             contestant.lastName = UserInterface.GetLastName();
