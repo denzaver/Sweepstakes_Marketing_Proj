@@ -17,13 +17,15 @@ namespace SweepstakesProgram
         //constructor
         public MarketingFirm(ISweepstakesManger manager)
         {
-
+            _manager = manager;
         }
 
         // member methods
         public void CreateSweepstake()
         {
-
+            Sweepstakes prize = new Sweepstakes("trip");
+            _manager.InsertSweepstake(prize);
+            
         }
 
         
