@@ -6,7 +6,25 @@ using System.Threading.Tasks;
 
 namespace SweepstakesProgram
 {
-    class SweepstakesStackManager
+    class SweepstakesStackManager : ISweepstakesManger
     {
+        //member variables
+        private Stack<Sweepstakes> myStack = new Stack<Sweepstakes>();
+        
+        //constructor
+
+
+        //member methods
+        public void InsertSweepstake(Sweepstakes sweepstakes)
+        {
+            myStack.Push(sweepstakes);
+        }
+
+        public Sweepstakes GetSweepStake()
+        {
+            myStack.Pop();
+            return myStack.Pop();
+        }
+
     }
 }
